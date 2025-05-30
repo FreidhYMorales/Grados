@@ -26,6 +26,7 @@ class Grado:
         if len(self._alumnos) == 3:
             print("Clase llena!!")
             print("Seleccione otra clase!!")
+            input() 
         else:
             self._alumnos.append(alumno)
             return False
