@@ -32,13 +32,11 @@ def menu():
             alum = Alumno(nombre, apellido)
             for grad in grados:
                 grad.VerGrado()
-            enc = True
-            while enc:
-                opc = int(input("Ingrese el codigo del Grado: "))
-                for grad in range(len(grados)):
-                    if grados[grad].codigo == opc:
-                        enc = grados[grad].AgregarAlumno(alum)
-            print("Alumno Agregado Exitosamente!!")
+            codigo = int(input("Ingrese el codigo del Grado: "))
+            for grad in range(len(grados)):
+                if grados[grad].codigo == codigo:
+                    grados[grad].AgregarAlumno(alum)
+            input()
         elif opc == 3:
             system("cls")
             for grad in range(len(grados)):

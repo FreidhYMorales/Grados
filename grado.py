@@ -23,13 +23,12 @@ class Grado:
         self.__nombre = value
 
     def AgregarAlumno(self, alumno):
-        if len(self._alumnos) == 3:
+        if len(self._alumnos) < 3:
+            self._alumnos.append(alumno)
+            print("Alumno agregado con exito!!")
+        else:
             print("Clase llena!!")
             print("Seleccione otra clase!!")
-            input() 
-        else:
-            self._alumnos.append(alumno)
-            return False
     def VerAlumnos(self):
         for alum in self._alumnos:
             print(alum)
